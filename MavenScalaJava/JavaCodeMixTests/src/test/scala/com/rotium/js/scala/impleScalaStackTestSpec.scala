@@ -1,15 +1,15 @@
 import org.scalatest.FeatureSpec
 import org.scalatest.BeforeAndAfter
 import org.scalatest.GivenWhenThen
-import com.rotium.sj.Stack
-import com.rotium.sj.SimpleJavaStack
+import com.rotium.sj.java.Stack
+import com.rotium.sj.scala.SimpleScalaStack
 
-class ScalaSimpleJavaStackTestSpec extends FeatureSpec with GivenWhenThen with BeforeAndAfter {
+class impleScalaStackTestSpec extends FeatureSpec with GivenWhenThen with BeforeAndAfter {
 
   var stack: Stack[Int] = _
 
   before {
-    stack = new SimpleJavaStack[Int]
+    stack = new SimpleScalaStack[Int]
   }
 
   feature("The user can pop an element off the top of the stack") {

@@ -1,4 +1,4 @@
-package com.rotium.sj;
+package com.rotium.sj.java;
 
 import static com.rotium.sj.java.immutable.ImmutableNode.ImmutableNode;
 

@@ -7,10 +7,13 @@ import java.util.NoSuchElementException;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SimpleStackTest {
+import com.rotium.sj.java.Stack;
+import com.rotium.sj.scala.SimpleScalaStack;
+
+public class SimpleJavaStackTest {
 
 	private Stack<String> getStack(int c) {
-		Stack<String> s = new SimpleJavaStack<String>();
+		Stack<String> s = new SimpleScalaStack<String>();
 		for (int i = 1; i <= c; i++) {
 			s.push("i"+i);
 		}
@@ -20,7 +23,7 @@ public class SimpleStackTest {
 	
 	@Test
 	public void pushPop() {
-		Stack<String> s = new SimpleJavaStack<String>();
+		Stack<String> s = new SimpleScalaStack<String>();
 		Assert.assertThat(s.size(), is(0));
 		Assert.assertThat(s.isEmpty(), is(true));
 		
@@ -63,13 +66,13 @@ public class SimpleStackTest {
 	
 	@Test(expected=NoSuchElementException.class)
 	public void popEmpty() {
-		Stack<String> s = new SimpleJavaStack<String>();
+		Stack<String> s = new SimpleScalaStack<String>();
 		s.pop();
 	}
 	
 	@Test(expected=NoSuchElementException.class)
 	public void topEmpty() {
-		Stack<String> s = new SimpleJavaStack<String>();
+		Stack<String> s = new SimpleScalaStack<String>();
 		s.top();
 	}
 }
