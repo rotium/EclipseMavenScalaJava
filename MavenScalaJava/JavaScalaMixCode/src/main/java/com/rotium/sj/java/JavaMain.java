@@ -13,7 +13,7 @@ public class JavaMain {
 			stack.pop();
 		}
 	}
-	
+
 	public void scalaStack(int c) {
 		Stack<Integer> stack = new SimpleScalaStack<Integer>();
 		for (int i = 0; i < c; i++) {
@@ -23,21 +23,20 @@ public class JavaMain {
 			stack.pop();
 		}
 	}
-	
+
 	public static void main(String[] args) {
-		final int count = 100;
-		
+		final int count = 100000;
+
 		JavaMain javaMain = new JavaMain();
-		
+
 		long javaStart = System.currentTimeMillis();
 		javaMain.javaStack(count);
 		long javaEnd = System.currentTimeMillis();
-		
+		System.out.println("Java Stack: " + (javaEnd - javaStart) + " ms.");
+
 		long scalaStart = System.currentTimeMillis();
 		javaMain.scalaStack(count);
 		long scalaEnd = System.currentTimeMillis();
-		
-		System.out.println("Java Stack: "+(javaEnd-javaStart));
-		System.out.println("Scala Stack: "+(scalaEnd-scalaStart));
+		System.out.println("Scala Stack: " + (scalaEnd - scalaStart) + " ms.");
 	}
 }
