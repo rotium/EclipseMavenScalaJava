@@ -7,9 +7,15 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>JavaCodeMixTests</module>
+		<module>JavaScalaMixCode</module>
 	</modules>
 
 	<properties>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<encoding>UTF-8</encoding>
+		<scala.version>2.10.0</scala.version>
+		<scala.tools.version>2.10</scala.tools.version>
 		<scalatest.output>WD</scalatest.output>
 	</properties>
 	<dependencyManagement>
@@ -27,7 +33,7 @@
 			<dependency>
 				<groupId>org.scala-lang</groupId>
 				<artifactId>scala-library</artifactId>
-				<version>2.10.0</version>
+				<version>${scala.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>junit</groupId>
@@ -37,7 +43,7 @@
 			</dependency>
 			<dependency>
 				<groupId>org.scalatest</groupId>
-				<artifactId>scalatest_2.10</artifactId>
+				<artifactId>scalatest_${scala.tools.version}</artifactId>
 				<version>1.9.1</version>
 				<scope>test</scope>
 			</dependency>
@@ -94,8 +100,8 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.1</version>
 					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
 					</configuration>
 					<executions>
 						<execution>

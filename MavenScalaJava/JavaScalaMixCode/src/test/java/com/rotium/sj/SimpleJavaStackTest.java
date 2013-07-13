@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.rotium.sj.java.SimpleJavaStack;
 import com.rotium.sj.java.Stack;
 
-public class impleScalaStackTest {
+public class SimpleJavaStackTest {
 
 	private Stack<String> getStack(int c) {
 		Stack<String> s = new SimpleJavaStack<String>();

@@ -1,8 +1,8 @@
 package com.rotium.sj.scala
 
-import com.rotium.sj.java.Stack
-import com.rotium.sj.java.immutable.ImmutableNode
 import scala.annotation.tailrec
+import com.rotium.sj.java.immutable.ImmutableNode
+import com.rotium.sj.java.Stack
 
 /**
  * This is far from idiomatic scala code. IT it just a copy of the Java code, so 
@@ -24,7 +24,7 @@ class SimpleScalaStack[T] extends Stack[T] {
       t
     } else throw new NoSuchElementException("Stack is empty");
 
-  def push(t: T): Unit = head = ImmutableNode.ImmutableNode(t, head);
+  def push(t: T): Unit = head = ImmutableNode.create(t, head);
 
   def size(): Int = {
     @tailrec

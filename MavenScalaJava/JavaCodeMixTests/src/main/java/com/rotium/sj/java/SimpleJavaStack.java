@@ -1,6 +1,5 @@
 package com.rotium.sj.java;
 
-import static com.rotium.sj.java.immutable.ImmutableNode.ImmutableNode;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -34,7 +33,7 @@ public class SimpleJavaStack<T> implements Stack<T> {
 	}
 
 	public void push(T t) {
-		head = ImmutableNode(t, head);
+		head = ImmutableNode.create(t, head);
 	}
 
 	public void clear() {

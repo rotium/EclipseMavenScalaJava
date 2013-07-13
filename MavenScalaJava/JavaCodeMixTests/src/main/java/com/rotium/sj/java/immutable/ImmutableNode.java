@@ -17,7 +17,7 @@ public class ImmutableNode<T> {
 		return next;
 	}
 	
-	public static <T> ImmutableNode<T> ImmutableNode(T item, ImmutableNode<T> next) {
+	public static <T> ImmutableNode<T> create(T item, ImmutableNode<T> next) {
 		return new ImmutableNode<T>(item, next);
 	}
 }
