@@ -14,7 +14,7 @@
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 		<encoding>UTF-8</encoding>
-		<scala.version>2.10.0</scala.version>
+		<scala.version>2.10.4</scala.version>
 		<scala.tools.version>2.10</scala.tools.version>
 		<scalatest.output>WD</scalatest.output>
 	</properties>
@@ -44,7 +44,7 @@
 			<dependency>
 				<groupId>org.scalatest</groupId>
 				<artifactId>scalatest_${scala.tools.version}</artifactId>
-				<version>1.9.1</version>
+				<version>2.1.2</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
@@ -57,7 +57,7 @@
 				<plugin>
 					<groupId>net.alchim31.maven</groupId>
 					<artifactId>scala-maven-plugin</artifactId>
-					<version>3.1.5</version>
+					<version>3.1.6</version>
 					<executions>
 						<execution>
 							<id>scala-compile-first</id>
@@ -123,7 +123,7 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>scala-maven-plugin</artifactId>
-				<version>3.1.5</version>
+				<version>3.1.6</version>
 			</plugin>
 		</plugins>
 	</reporting>
